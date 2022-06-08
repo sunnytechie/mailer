@@ -23,7 +23,7 @@
                     <a href="{{ route('email.create') }}" class="dropdown-item">Emails</a>
                 </div>
             </div>
-            <a href="#" class="nav-item nav-link"><i class="fa fa-paper-plane me-2"></i>Sent Msgs</a>
+            <a href="{{ route('msg.index') }}" class="nav-item nav-link"><i class="fa fa-paper-plane me-2"></i>Sent Msgs</a>
             <a href="#" class="nav-item nav-link"><i class="fa fa-star me-2"></i>Starred</a>
             <a href="#" class="nav-item nav-link"><i class="fa fa-clock me-2"></i>Snoored</a>
             <a href="#" class="nav-item nav-link"><i class="fa fa-file me-2"></i>Drafts</a>

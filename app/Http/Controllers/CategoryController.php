@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todo;
 use App\Models\Catergory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +12,8 @@ use Illuminate\Support\Facades\Auth;
 class CategoryController extends Controller
 {
     public function create() {
-        return view('category.create');
+        $todos = Todo::all();
+        return view('category.create', compact('todos'));
     }
 
     public function store(Request $request) {

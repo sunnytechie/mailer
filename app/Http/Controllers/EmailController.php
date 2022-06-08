@@ -2,20 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Catergory;
+use App\Models\Todo;
 use App\Models\People;
+use App\Models\Catergory;
+use App\Mail\NewsletterMail;
+use App\Models\Msg;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\NewsletterMail;
 
 class EmailController extends Controller
 {
     public function create()
     {
         $categories = Catergory::all();
+        $todos = Todo::all();
 
-        return view('emailblade.create', compact('categories'));
+        return view('emailblade.create', compact('categories', 'todos'));
     }
 
     public function email(Request $request) {
@@ -46,6 +49,10 @@ class EmailController extends Controller
         }
 
         //Store the data in the database
+        $msg = new Msg();
+        $msg->subject = $request->subject;
+        $msg->message = $request->message;
+        $msg->save();
 
         //reroute to the dashboard
         return back()->with('success', 'Email sent successfully');
