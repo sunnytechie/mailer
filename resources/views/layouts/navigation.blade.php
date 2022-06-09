@@ -120,7 +120,6 @@
         }
     @endphp
        </span>
-        <span style="padding-left: 4px">{{ Auth::user()->name }}</span>
     </div>
     <div class="navbar-nav align-items-center ms-auto">
 
@@ -190,7 +189,7 @@
 
         <div class="nav-item dropdown profile-dropdown">
             <a href="#" class="nav-link d-flex dropdown-toggle" data-bs-toggle="dropdown">
-                <img class="rounded-circle me-lg-2" src="{{ asset('assets/img/ifi.png') }}" alt="" style="width: 40px; height: 40px;">
+                <img class="rounded-circle me-lg-2" src="{{ asset('assets/img/logo.png') }}" alt="" style="width: 40px; height: 40px;">
                 {{-- <span class="d-none mt-2 d-lg-inline-flex"> {{ Auth::user()->name }} </span> --}}
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">

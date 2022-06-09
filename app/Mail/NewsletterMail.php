@@ -35,7 +35,7 @@ class NewsletterMail extends Mailable
     public function build()
     {
         return $this->markdown('mail.newsletter-mail')
-        ->subject('Newsletter')
-        ->from('hello@sfiloveinaction.org');
+            ->subject($this->compose['subject'])
+            ->from('hello@sfiloveinaction.org');
     }
 }
