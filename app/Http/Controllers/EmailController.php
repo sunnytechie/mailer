@@ -49,10 +49,10 @@ class EmailController extends Controller
         }
 
         //Store the data in the database
-        $msg = new Msg();
-        $msg->subject = $request->subject;
-        $msg->message = $request->message;
-        $msg->save();
+        //$msg = new Msg();
+        //$msg->subject = $request->subject;
+        //$msg->message = $request->message;
+        //$msg->save();
 
         //reroute to the dashboard
         return back()->with('success', 'Email sent successfully');
