@@ -17,4 +17,8 @@ class MailerController extends Controller
         return view('dashboard', compact('category', 'todos'));
     }
 
+    public function index() {
+        return view('index');
+    }
+
 }

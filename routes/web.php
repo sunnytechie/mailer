@@ -20,6 +20,7 @@ Route::get('/', function () {
 //DashboardController Route
 Route::middleware('auth')->group(function () {
 Route::get('/dashboard', [App\Http\Controllers\MailerController::class, 'dashboard'])->name('dashboard');
+Route::get('/index', [App\Http\Controllers\MailerController::class, 'index'])->name('index');
 });
 
 //CategoryController Route
