@@ -34,7 +34,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return redirect()->route('category.create')->with('success', 'Category created successfully');
+        return back()->with('success', 'Category created successfully');
     
     }
 }

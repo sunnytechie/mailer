@@ -4,14 +4,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Breeze Admin</title>
+    <title>S.F.I Mailer</title>
     <link rel="stylesheet" href="breeze/assets/vendors/mdi/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="breeze/assets/vendors/flag-icon-css/css/flag-icon.min.css" />
     <link rel="stylesheet" href="breeze/assets/vendors/css/vendor.bundle.base.css" />
     <link rel="stylesheet" href="breeze/assets/vendors/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="breeze/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
     <link rel="stylesheet" href="breeze/assets/css/style.css" />
-    <link rel="shortcut icon" href="breeze/assets/images/favicon.png" />
+    <link rel="shortcut icon" href="breeze/assets/images/logo.png" />
   </head>
   <body>
     <div class="container-scroller">
@@ -45,17 +45,25 @@
             <div class="page-header flex-wrap">
               <h3 class="mb-0"> Hi, welcome back!
               </h3>
+              
+              @if(Session::has('success'))
+                    <span class="alert alert-info m-2">{{ Session::get('success') }}</span>
+              @endif
               <div class="d-flex">
                 <button type="button" class="btn btn-sm bg-white btn-icon-text border">
                   <i class="mdi mdi-file-import btn-icon-prepend"></i> Import 
                 </button>
                 <button type="button" class="btn btn-sm bg-white btn-icon-text border">
                     <i class="mdi mdi-file-export btn-icon-prepend"></i> Export 
-                  </button>
-                <button type="button" class="btn btn-sm bg-white btn-icon-text border ml-3">
+                </button>
+
+                <button type="button" class="btn btn-sm bg-white btn-icon-text border ml-3" data-toggle="modal" data-target="#addCategory">
                   <i class="mdi mdi-playlist-plus btn-icon-prepend"></i> Category 
                  </button>
-                <button type="button" class="btn btn-sm ml-3 btn-success"  data-toggle="modal" data-target="#addUser">
+                 @include('snippets.modals.addcategory')
+
+
+                <button type="button" class="btn btn-sm ml-3 btn-success" data-toggle="modal" data-target="#addUser">
                   <i class="mdi mdi-account-multiple-plus btn-icon-prepend"></i> Add Member 
                   </button>
                 {{-- Modals --}}
@@ -77,8 +85,11 @@
                         </p>
                       </div>
                       <div class="col-sm-5 text-md-right">
-                        <button type="button" class="btn btn-icon-text mb-3 mb-sm-0 btn-inverse-primary font-weight-normal">
-                          <i class="mdi mdi-message-text-outline btn-icon-prepend"></i>Compose Mail </button>
+                        <button type="button" class="btn btn-icon-text mb-3 mb-sm-0 btn-inverse-primary font-weight-normal" data-toggle="modal" data-target="#compose">
+                          <i class="mdi mdi-message-text-outline btn-icon-prepend"></i>Compose Mail 
+                        </button>
+                        @include('snippets.modals.compose')
+
                       </div>
                     </div>
 
@@ -132,6 +143,16 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="breeze/assets/js/dashboard.js"></script>
+    <!-- CKEDITOR Javascript -->
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'floatingTextarea');
+       // ClassicEditor
+       //     .create( document.querySelector( '#articleEditor' ) )
+       //     .catch( error => {
+       //         console.error( error );
+       //     } );
+   </script>
     <!-- End custom js for this page -->
   </body>
 </html>

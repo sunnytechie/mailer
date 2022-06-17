@@ -3,16 +3,17 @@
       <div class="card-body">
         <h4 class="card-title pb-3">Sent History</h4>
        
+        @foreach ($msgs as $msg)
         <div class="list-card">
           <div class="row align-items-center">
             <div class="col-7 col-sm-8">
               <div class="row align-items-center">
                 <div class="col-sm-4">
-                  <img src="{{ asset('breeze/assets/images/faces/face2.jpg') }}" alt="" />
+                  <img src="{{ asset('breeze/assets/images/logo.png') }}" alt="" />
                 </div>
                 <div class="col-sm-8 pr-0 pl-sm-0">
-                  <span>06 Jan 2019</span>
-                  <h6 class="mb-1 mb-sm-0">Isabel Cross</h6>
+                  <span>{{ $msg->updated_at->diffForHumans() }}</span>
+                  <h6 class="mb-1 mb-sm-0">{{ Str::limit($msg->subject, 12) }}</h6>
                 </div>
               </div>
             </div>
@@ -35,6 +36,7 @@
             </div>
           </div>
         </div>
+        @endforeach
        
       </div>
     </div>

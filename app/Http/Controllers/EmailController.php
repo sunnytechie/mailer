@@ -49,10 +49,10 @@ class EmailController extends Controller
         }
 
         //Store the data in the database
-        //$msg = new Msg();
-        //$msg->subject = $request->subject;
-        //$msg->message = $request->message;
-        //$msg->save();
+        $msg = new Msg();
+        $msg->subject = $request->subject;
+        $msg->message = $request->message;
+        $msg->save();
 
         //reroute to the dashboard
         return back()->with('success', 'Email sent successfully');
@@ -76,7 +76,7 @@ class EmailController extends Controller
 
         $people->save();
 
-        return redirect()->route('email.create')->with('success', 'Email stored successfully');
+        return back()->with('success', 'Email stored successfully');
     
     }
 }
