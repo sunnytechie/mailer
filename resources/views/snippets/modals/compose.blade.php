@@ -41,7 +41,7 @@
               <textarea 
               class="form-control" 
               name="message"
-              id="floatingTextarea"></textarea>
+              id="myeditorinstance"></textarea>
             </div>
           
         </div>
