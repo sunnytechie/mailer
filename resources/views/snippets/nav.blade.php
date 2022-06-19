@@ -19,7 +19,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/">
-          <i class="mdi mdi-home menu-icon"></i>
+          <i class="mdi mdi-view-dashboard menu-icon"></i>
           <span class="menu-title">Dashboard</span>
         </a>
       </li>
@@ -32,18 +32,24 @@
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item">
-              <a class="nav-link" href="#">Categories</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#addCategory">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Emails</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#addUser">Emails</a>
             </li>
           </ul>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#sentModal">
           <i class="mdi mdi-share menu-icon"></i>
           <span class="menu-title">Sent Msgs</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#todoModal">
+          <i class="mdi mdi-playlist-check menu-icon"></i>
+          <span class="menu-title">Todo List</span>
         </a>
       </li>
       <li class="nav-item">
@@ -77,10 +83,22 @@
               <p class="text-black">Others</p>
             </div>
             <ul class="mt-4 pl-0">
-              <li>Sign Out</li>
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+              <a href="{{ route('logout') }}" onclick="event.preventDefault();
+              this.closest('form').submit();">
+              <li>
+                 Sign Out 
+                </li>
+              </a>
+              </form>
             </ul>
           </div>
         </div>
       </li>
     </ul>
   </nav>
+
+  {{-- include modals --}}
+  @include('snippets.modals.sent')
+  @include('snippets.modals.todo')

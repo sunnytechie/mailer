@@ -21,10 +21,13 @@ class MailerController extends Controller
 
     public function index() {
         $categories = Catergory::all();
-        $todos = Todo::where('user_id', '=', Auth::user()->id)->get();
+        $todos = Todo::orderBy('id', 'DESC')->where('user_id', '=', Auth::user()->id)->paginate(4);
         $msgs = Msg::orderBy('id', 'DESC')->paginate(4);
 
-        return view('index', compact('categories', 'todos', 'msgs'));
+        $allTodos = Todo::orderBy('id', 'DESC')->where('user_id', '=', Auth::user()->id)->get();
+        $allMsgs = Msg::orderBy('id', 'DESC')->get();
+
+        return view('index', compact('categories', 'todos', 'msgs', 'allTodos', 'allMsgs'));
     }
 
 }

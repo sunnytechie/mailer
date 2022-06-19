@@ -106,8 +106,14 @@
           <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown">
             <a class="dropdown-item" href="#">
               <i class="mdi mdi-cached mr-2 text-success"></i> Activity Log </a>
-            <a class="dropdown-item" href="#">
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+            <a class="dropdown-item"
+            onclick="event.preventDefault();
+                                        this.closest('form').submit();"
+            href="{{ route('logout') }}">
               <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
+            </form>
           </div>
         </li>
       </ul>
