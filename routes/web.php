@@ -52,5 +52,11 @@ Route::get('/sent', [App\Http\Controllers\MsgController::class, 'index'])->name(
 Route::get('/sent/delete/{id}', [App\Http\Controllers\MsgController::class, 'delete'])->name('msg.delete');
 });
 
+//File import Route
+Route::middleware('auth')->group(function () {
+    Route::post('import', [App\Http\Controllers\PeopleController::class, 'import'])->name('import');
+    Route::get('export', [App\Http\Controllers\PeopleController::class, 'export'])->name('export');
+});
+
 
 require __DIR__.'/auth.php';

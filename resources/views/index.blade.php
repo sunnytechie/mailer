@@ -50,12 +50,14 @@
                     <span class="alert alert-info m-2">{{ Session::get('success') }}</span>
               @endif
               <div class="d-flex">
-                <button type="button" class="btn btn-sm bg-white btn-icon-text border">
+                <button type="button" class="btn btn-sm bg-white btn-icon-text border" data-toggle="modal" data-target="#importPeople">
                   <i class="mdi mdi-file-import btn-icon-prepend"></i> Import 
                 </button>
-                <button type="button" class="btn btn-sm bg-white btn-icon-text border">
+                @include('snippets.modals.import.excel')
+
+                <a href="{{ route('export') }}" type="button" class="btn btn-sm bg-white btn-icon-text border">
                     <i class="mdi mdi-file-export btn-icon-prepend"></i> Export 
-                </button>
+                </a>
 
                 <button type="button" class="btn btn-sm bg-white btn-icon-text border ml-3" data-toggle="modal" data-target="#addCategory">
                   <i class="mdi mdi-playlist-plus btn-icon-prepend"></i> Category 
@@ -163,5 +165,11 @@
        //     } );
    </script>
     <!-- End custom js for this page -->
+
+    <script>
+      setTimeout(function() {
+          $('.alert').fadeOut('fast');
+      }, 5000);
+  </script>
   </body>
 </html>
