@@ -99,4 +99,10 @@
        //         console.error( error );
        //     } );
    </script>
+   // Dismiss Alert
+   <script>
+    setTimeout(function() {
+        $('.alert').fadeOut('fast');
+    }, 5000);
+</script>
 </html>

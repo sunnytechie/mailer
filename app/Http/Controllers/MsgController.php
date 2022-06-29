@@ -15,4 +15,12 @@ class MsgController extends Controller
         $msgs = Msg::all();
         return view('msg.index', compact('todos', 'msgs'));
     }
+
+    //delete
+    public function delete($id)
+    {
+        $msg = Msg::find($id);
+        $msg->delete();
+        return back()->with('success', 'Message Deleted Successfully');
+    }
 }

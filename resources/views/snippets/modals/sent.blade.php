@@ -20,7 +20,7 @@
                   
                   <div class="btn-group" role="group" aria-label="Button group">
                     <button class="btn btn-info" type="button">Reuse</button>
-                    <button class="btn btn-danger" type="button">Delete</button>
+                    <a href="{{ route('msg.delete', $msg->id) }}" class="btn btn-danger" type="button">Delete</a>
                   </div>
                 </div>
               </div>

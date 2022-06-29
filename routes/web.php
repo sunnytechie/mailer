@@ -48,7 +48,8 @@ Route::get('/todo/delete/{id}', [App\Http\Controllers\TodoController::class, 'de
 
 //MsgController Route
 Route::get('/sent', [App\Http\Controllers\MsgController::class, 'index'])->name('msg.index');
-
+//Delete Route
+Route::get('/sent/delete/{id}', [App\Http\Controllers\MsgController::class, 'delete'])->name('msg.delete');
 });
 
 
