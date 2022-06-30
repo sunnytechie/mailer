@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        /* Hide spacer on screen resolution of 640px */
+        @media screen and (max-width: 640px) {
+            .spacer {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body style="background: #E3E3E3">
 
@@ -26,8 +34,8 @@
         <div style="background: #f8eaea; padding: 30px; text-align: center; border-bottom: 0.1rem solid #fff; border-top: 0.1rem solid #fff;">
             <div style="margiin-bottom: 5px; text-align: center">Get our God's heartbeat mobile app</div>
             <br>
-            <a style="margin-right: 10px" href="#"><img style="border-radius: 0.5rem;" src="https://ci6.googleusercontent.com/proxy/EyzDZFwB6ATD3E1pZR-MnYhPHm2D7NKOtSK54BK_p3DgUVlgDS9T_2x2X9yTFeYX2hCY3NWTjVtNPv0fQCZDcYPh5LletyIW7AwQRA=s0-d-e1-ft#https://www.totaljobs.com/email-assets/appStore_Apple.gif" alt=""></a>
-            <a href="#"><img style="border-radius: 0.5rem" src="https://ci4.googleusercontent.com/proxy/ONwoAU0nSWXoT80avv-r2FetSnryV5Dzl4ZvqAZ_GDZl-CI6jmtjUQ90ru1hz97sfFmg67v3NDARJsue_8oBYpCKXBfuok1waYWVvsc=s0-d-e1-ft#https://www.totaljobs.com/email-assets/appStore_Google.gif" alt=""></a>
+            <a style="margin-right: 10px" href="#"><img style="border-radius: 0.5rem;" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-17.png" alt=""></a>
+            <a href="#"><img style="border-radius: 0.5rem" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-18.png" alt=""></a>
         </div>
 
         {{-- Footer --}}
