@@ -22,6 +22,8 @@ class EmailController extends Controller
     }
 
     public function email(Request $request) {
+
+        
         //Validate the request...
         $this->validate($request, [
             'subject' => 'required',

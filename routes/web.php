@@ -58,5 +58,7 @@ Route::middleware('auth')->group(function () {
     Route::get('export', [App\Http\Controllers\PeopleController::class, 'export'])->name('export');
 });
 
+Route::get('/email', [App\Http\Controllers\EmailController::class, 'email'])->name('email.sent');
+
 
 require __DIR__.'/auth.php';
