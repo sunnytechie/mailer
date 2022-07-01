@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 //DashboardController Route
 Route::middleware('auth')->group(function () {
-Route::get('/dashboard', [App\Http\Controllers\MailerController::class, 'dashboard'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\MailerController::class, 'index'])->name('index.home');
 Route::get('/', [App\Http\Controllers\MailerController::class, 'index'])->name('index');
 });
 
