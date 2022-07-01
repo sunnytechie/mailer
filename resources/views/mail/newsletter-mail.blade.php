@@ -12,6 +12,11 @@
                 display: none;
             }
         }
+
+        .msg p {
+            font-size: 16px;
+            line-height: 24px;
+        }
     </style>
 </head>
 <body style="background: #E3E3E3">
@@ -24,9 +29,16 @@
             <img class="img-thumbnail" height="60px" width="60px" src="https://sfiloveinaction.org/wp-content/uploads/2022/07/cropped-SFI-Logo.png" alt="Loading">
         </div>
 
-        <div style="padding: 15px 18px; font-size: 14px;">
+        <div class="msg" style="padding: 15px 18px; font-size: 14px;">
     
             {!! $compose['message'] !!}
+            <p>We have entered the 2nd half of the year; the month of July; which is our month of FAITH. </p>
+            <p>Faith is an indispensable act required for the existence of every Christian which if void, separates one from God. It is a necessary ingredient for life. Dare to have and increase your faith this month. </p>
+            <p>The month of July is a special month in the ministry of SFI. This is because it's our founder and Mentor's birth month. And on the 1st of and 2nd of July, Sisters Fellowship International will be celebrating the birthday of an Icon, Rev Mrs Nches Iredu. There will be amazing activities such as; praise night, song ministrations, dance, drama and lots more.</p>
+            <p>And on the 6th of July Sister Fellowship International Hqtrs will also be celebrating the birthday of a Rare Gem. She is indeed a unique and wonderful mother, a spiritual leader who nurtures everyone to become a better version of themselves. </p>
+            <p>In Sister Fellowship International Young Daughters Forum Calendar, the month of July is the month for a book review. This is an opportunity where reads a particular book and also review the book. Different expositions and understanding are shared and in the end, more insight is gained and lives impacted. </p>
+            <p>This month, raise your faith for the miraculous. Stay tuned and connected to God. Don't miss out on anything, it's sure going to be a month filled with pleasant surprises for you.</p>
+            <p>cheers!!!</p>
             
         </div>
 
