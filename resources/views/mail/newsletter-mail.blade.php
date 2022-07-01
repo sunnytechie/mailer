@@ -17,28 +17,28 @@
 <body style="background: #E3E3E3">
 
     <div class="spacer" style="height: 20px"></div>
-    {{-- Center div of 640px --}}
+    
     <div style="width: 640px; margin: 0 auto; background: #fff">
-        {{-- Header --}}
-        <div style="width: 100%; background: #ffffff; margin-bottom: 5px;">
-            <img class="img-thumbnail" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Daily-Newsletter-4.png" alt="Loading">
+       
+        <div style="width: 100%; background: #ffffff; margin-bottom: 5px; text-align: center; padding: 15px; border-bottom: 0.1rem solid #aaa;">
+            <img class="img-thumbnail" height="60px" width="60px" src="https://sfiloveinaction.org/wp-content/uploads/2022/07/cropped-SFI-Logo.png" alt="Loading">
         </div>
 
-        {{-- message --}}
-        <div style="padding: 0px 18px; font-size: 14px; font-family: 'Roboto', sans-serif;">
+        <div style="padding: 15px 18px; font-size: 14px; font-family: 'Roboto', sans-serif;">
     
             {!! $compose['message'] !!}
+            
         </div>
 
-        {{-- Downloadable Apps --}}
+       
         <div style="background: #f8eaea; padding: 30px; text-align: center; border-bottom: 0.1rem solid #fff; border-top: 0.1rem solid #fff;">
             <div style="margiin-bottom: 5px; text-align: center">Get our God's heartbeat mobile app</div>
             <br>
-            <a style="margin-right: 10px" href="#"><img style="border-radius: 0.5rem;" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-17.png" alt=""></a>
-            <a href="#"><img style="border-radius: 0.5rem" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-18.png" alt=""></a>
+            <a style="margin-right: 10px" href="#"><img style="border-radius: 0.2rem;" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-17.png" alt=""></a>
+            <a href="#"><img style="border-radius: 0.2rem" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-18.png" alt=""></a>
         </div>
 
-        {{-- Footer --}}
+        
         <footer style="background: #f8eaea; padding: 20px 0;">
             <div style="padding: 5px 20px">
                 <a style="font-size: 12px; text-decoration: none; border-bottom: 0.1rem solid #ddd; color: #aaa;" href="#">Unsubscribe</a> | <a style="font-size: 12px; text-decoration: none; border-bottom: 0.2rem solid #ddd; color: #aaa;" href="#">Privacy Policy</a> <br>
