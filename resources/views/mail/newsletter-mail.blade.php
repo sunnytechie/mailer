@@ -24,7 +24,7 @@
             <img class="img-thumbnail" height="60px" width="60px" src="https://sfiloveinaction.org/wp-content/uploads/2022/07/cropped-SFI-Logo.png" alt="Loading">
         </div>
 
-        <div style="padding: 15px 18px; font-size: 14px; font-family: 'Roboto', sans-serif;">
+        <div style="padding: 15px 18px; font-size: 14px;">
     
             {!! $compose['message'] !!}
             
@@ -34,14 +34,14 @@
         <div style="background: #f8eaea; padding: 30px; text-align: center; border-bottom: 0.1rem solid #fff; border-top: 0.1rem solid #fff;">
             <div style="margiin-bottom: 5px; text-align: center">Get our God's heartbeat mobile app</div>
             <br>
-            <a style="margin-right: 10px" href="#"><img style="border-radius: 0.2rem;" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-17.png" alt=""></a>
-            <a href="#"><img style="border-radius: 0.2rem" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-18.png" alt=""></a>
+            <a style="margin-right: 10px" href="https://apps.apple.com/gb/app/sfghb/id1564125722"><img style="border-radius: 0.2rem;" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-17.png" alt=""></a>
+            <a href="https://play.google.com/store/apps/details?id=godsheartbeat.net"><img style="border-radius: 0.2rem" src="https://sfiloveinaction.org/wp-content/uploads/2022/06/Untitled-design-18.png" alt=""></a>
         </div>
 
         
         <footer style="background: #f8eaea; padding: 20px 0;">
             <div style="padding: 5px 20px">
-                <a style="font-size: 12px; text-decoration: none; border-bottom: 0.1rem solid #ddd; color: #aaa;" href="#">Unsubscribe</a> | <a style="font-size: 12px; text-decoration: none; border-bottom: 0.2rem solid #ddd; color: #aaa;" href="#">Privacy Policy</a> <br>
+                <a style="font-size: 12px; text-decoration: none; border-bottom: 0.1rem solid #ddd; color: #aaa;" href="#">Unsubscribe</a> | <a style="font-size: 12px; text-decoration: none; border-bottom: 0.2rem solid #ddd; color: #aaa;" href="https://www.sfiloveinaction.org/">Privacy Policy</a> <br>
             </div>
             <div style="padding: 5px 20px">
                 <span style="font-size: 12px; color: rgb(139, 138, 138);">Jesus Transformation Camp, Along Nkpor Umuoji Road, Anambra, Nigeria.</span>
